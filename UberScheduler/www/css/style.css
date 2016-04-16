@@ -33,3 +33,7 @@ h1{
 p{
     font-size:20px;
 }
+.bar-assertive{
+    background-color:#546E7A !important;
+    color:white;
+}
