@@ -3,19 +3,35 @@
     <div class="bluebar">
         <div class="row">
             <div class="col col-50 onebaractive" ng-if="oneOn">
-                <p>One On</p>
+                <p>General</p>
             </div>
-            <div  class="col col-50 onebar"  ng-if="!oneOn" ng-click="oneOn = !oneOn" >
-                <p><a ng-click="oneOn = !oneOn" style="color:white;">One Off</a></p>
+            <div  class="col col-50 onebar"  ng-if="!oneOn"  ng-click="toggleTab()"  >
+                <p><a ng-click="oneOn = !oneOn" style="color:white;">General</a></p>
             </div>
-            <div class="col col-50 twobar" ng-if="oneOn" ng-click="oneOn = !oneOn" >
-                <p><a ng-click="oneOn = !oneOn" style="color:white">Two Off</a></p>
+            <div class="col col-50 twobar" ng-if="oneOn" ng-click="toggleTab()" >
+                <p><a ng-click="oneOn = !oneOn" style="color:white">Locations</a></p>
             </div>
             <div class="col col-50 twobaractive" ng-if="!oneOn">
-                <p>Two On</p>
+                <p>Locations</p>
             </div>
         </div>
     </div>
-   <p>{{oneOn}} <a ng-click="oneOn = !oneOn">CHANGE</a></p>
+        <div ng-if="oneOn">
+            
+        </div>
+        <div ng-if="!oneOn">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Pickup Location</span>
+                    <input type="text" value="{{playlists[lastChar-1].place}}" ng-modal="pickup">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Drop Off Location</span>
+                    <input type="text" placeholder="Drop Off Location" ng-modal="dropoff">
+                </label>
+                
+            </div>
+        </div>
+      
   </ion-content>
 </ion-view>

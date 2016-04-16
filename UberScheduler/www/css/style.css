@@ -46,7 +46,6 @@ a{
     height:50px; 
     background-color:#546E7A;
     color:white;
-    
 }
 .onebar {
     text-align:center;
@@ -55,7 +54,7 @@ a{
 }
 .onebaractive {
     text-align:center;
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid #ECEFF1;
     color:white;
 }
 .twobar {
@@ -64,6 +63,6 @@ a{
 }
 .twobaractive {
     text-align:center;
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid #ECEFF1;
     color:white;
 }

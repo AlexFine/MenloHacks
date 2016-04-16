@@ -52,6 +52,11 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
     $scope.oneOn = true;
+    $scope.toggleTab = function(){
+        $scope.oneOn = !$scope.oneOn;
+        console.log('Hello BOIIIOIOI')
+    }
+    
     
     $scope.currentpage = window.location.href;
     var currentpage = window.location.href;
