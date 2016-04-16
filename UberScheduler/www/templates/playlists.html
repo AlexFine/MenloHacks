@@ -3,7 +3,8 @@
   <ion-content>
  
 
-        <div ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}" class="ride" >
+        <div ng-repeat="playlist in playlists" class="ride" >
+            <a  href="#/app/playlists/{{playlist.id}}">
             <div  class="cover" style="background-image:url('{{playlist.image}}'); ">
                 <!--use contian for background cover -->
             </div>
@@ -21,7 +22,7 @@
             </div>
             
             
-                
+                </a>
             
         </div>
    
