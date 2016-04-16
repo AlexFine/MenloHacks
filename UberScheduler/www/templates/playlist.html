@@ -1,6 +1,21 @@
 <ion-view view-title="Ride Details">
   <ion-content>
-    <h1>Ride Details for ride number {{lastChar}}</h1>
-   
+    <div class="bluebar">
+        <div class="row">
+            <div class="col col-50 onebaractive" ng-if="oneOn">
+                <p>One On</p>
+            </div>
+            <div  class="col col-50 onebar"  ng-if="!oneOn" ng-click="oneOn = !oneOn" >
+                <p><a ng-click="oneOn = !oneOn" style="color:white;">One Off</a></p>
+            </div>
+            <div class="col col-50 twobar" ng-if="oneOn" ng-click="oneOn = !oneOn" >
+                <p><a ng-click="oneOn = !oneOn" style="color:white">Two Off</a></p>
+            </div>
+            <div class="col col-50 twobaractive" ng-if="!oneOn">
+                <p>Two On</p>
+            </div>
+        </div>
+    </div>
+   <p>{{oneOn}} <a ng-click="oneOn = !oneOn">CHANGE</a></p>
   </ion-content>
 </ion-view>

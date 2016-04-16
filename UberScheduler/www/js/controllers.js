@@ -51,6 +51,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+    $scope.oneOn = true;
+    
     $scope.currentpage = window.location.href;
     var currentpage = window.location.href;
     var lastChar = currentpage.charAt(currentpage.length - 1);

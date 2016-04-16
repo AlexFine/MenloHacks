@@ -30,7 +30,7 @@
 h1{
     color:white;
 }
-p{
+.largeText{
     font-size:20px;
 }
 .bar-assertive{
@@ -41,4 +41,29 @@ p{
 }
 a{
     text-decoration: none;
+}
+.bluebar{
+    height:50px; 
+    background-color:#546E7A;
+    color:white;
+    
+}
+.onebar {
+    text-align:center;
+    color:white;
+    
+}
+.onebaractive {
+    text-align:center;
+    border-bottom: 5px solid white;
+    color:white;
+}
+.twobar {
+    text-align:center;
+    color:white;
+}
+.twobaractive {
+    text-align:center;
+    border-bottom: 5px solid white;
+    color:white;
 }
