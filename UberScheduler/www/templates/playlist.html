@@ -17,21 +17,21 @@
         </div>
     </div>
         <div ng-if="oneOn">
-            
+
         </div>
         <div ng-if="!oneOn">
-            <div class="list">
-                <label class="item item-input item-floating-label">
-                    <span class="input-label">Pickup Location</span>
-                    <input type="text" value="{{playlists[lastChar-1].place}}" ng-modal="pickup">
-                </label>
-                <label class="item item-input item-floating-label">
-                    <span class="input-label">Drop Off Location</span>
-                    <input type="text" placeholder="Drop Off Location" ng-modal="dropoff">
-                </label>
-                
-            </div>
+          <div class="list">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Pickup Location</span>
+              <input type="text" value="{{playlists[lastChar-1].place}}" ng-modal="pickup">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Drop Off Location</span>
+              <input type="text" placeholder="Drop Off Location" ng-modal="dropoff">
+            </label>
+
+          </div>
         </div>
-      
+
   </ion-content>
 </ion-view>

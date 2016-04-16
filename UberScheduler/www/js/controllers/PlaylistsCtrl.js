@@ -1,5 +1,8 @@
-angular.module('playlistsCtrl', [])
-.controller('PlaylistsCtrl', function($scope) {
+angular.module('playlistsCtrl', ['ridesService'])
+.controller('PlaylistsCtrl', function($scope, testVariable, testFunction) {
+  console.log(testFunction(5));
+  console.log(testVariable);
+
   $scope.playlists = [
     { time: '9:45 AM', id: 1, image: 'img/Golden.jpg', place: 'Golden Gate Bridge, San Francisco, CA'},
     { time: '4:00 PM', id: 2, image: 'img/Art.jpg', place: '755 Ocean Ave, San Francisco, CA' },
