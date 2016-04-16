@@ -35,5 +35,7 @@ p{
 }
 .bar-assertive{
     background-color:#546E7A !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight:bold;
     color:white;
 }
