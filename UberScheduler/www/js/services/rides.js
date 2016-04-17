@@ -11,8 +11,72 @@ angular.module('ridesService', ['ionic'])
 
   })
 
-  .factory('retrieveSchedule', function() {
+  .factory('retrieveSchedule', function($http) {
     // Pull from server
+	var userID = "sam";
+	var email = "menlohacks@gmail.com"
+	var time = '9:45 AM';
+  var date = [2016, 20, 4],
+	date = JSON.stringify(date);
+  var repeating = false;
+  var repeatedDays = [false, true, false, true, false, true, false];
+  var repeatedDays = JSON.stringify(repeatedDays)
+  var image = 'img/Golden.jpg';
+  var dropoff = 'Golden Gate Bridge, San Francisco, CA';
+  var pickup = 'Menlo School, Aherton, CA 94027'
+						
+				
+	var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/user/create";
+  $http.post(url, {
+//    "userID":userID,
+//    "message":email,
+//		//SAM YOU NEED TO TELL ME EXACTLY WHAT NEEDS TO BE PASSED HERE
+//		"time":time,
+//		"date":date,
+//		"repeating":repeating,
+//		"repeatedDays":repeatedDays,
+//		"image":image,
+//		"dropoff": dropoff,
+//		"pickup": pickup
+    // "passwrd": storedUsername
+		"daysOfWeek": repeatedDays,
+    "dropLat": dropoff,
+    "dropLong": dropoff,
+    "timeSec": "3",
+    "pickLat": pickup,
+    "time":time,
+    "pickLong": pickup,
+    "userID": "sam",
+		"date": "2016, 17, 4",
+		"message":email
+		//EDIT THIS IF NECCESSARY
+		
+		
+  }).then(function (resps) {
+    console.log(resps)
+		
+  })
+  var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
+  $http.post(url, {
+    "userID":userID
+  }).then(function (resps) {
+    console.log(resps)
+  })
+  var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
+  $http.post(url, {
+    "daysOfWeek": "1",
+    "dropLat": 2,
+    "dropLong": 2,
+    "timeSec": "3",
+    "pickLat": 12,
+    "time": "2",
+    "pickLong": 3,
+    "userID": "sam",
+		"date": "2016, 20, 4"
+  }).then(function (resps) {
+    console.log(resps)
+  })
+	
 
     var playlists = [
       {
