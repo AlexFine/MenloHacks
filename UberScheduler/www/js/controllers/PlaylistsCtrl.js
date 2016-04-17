@@ -1,4 +1,4 @@
-console.log("Playlists Ctrl loaded");
+// console.log("Playlists Ctrl loaded"); // Feedback
 angular.module('playlistsCtrl', ['ridesService'])
 .controller('PlaylistsCtrl', function($scope, testVariable, testFunction) {
   console.log(testFunction(5));

@@ -1,4 +1,4 @@
-console.log("Rides service file loaded");
+// console.log("Rides service file loaded"); // Feedback
 angular.module('ridesService', ['ionic'])
   .factory('testVariable', function() {
     return "Rides Service Works"
