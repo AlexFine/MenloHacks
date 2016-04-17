@@ -50,21 +50,24 @@ a{
 .onebar {
     text-align:center;
     color:white;
-    
+    font-size:18px;
 }
 .onebaractive {
     text-align:center;
     border-bottom: 5px solid #ECEFF1;
     color:white;
+		font-size:18px;
 }
 .twobar {
     text-align:center;
     color:white;
+		font-size:18px;
 }
 .twobaractive {
     text-align:center;
     border-bottom: 5px solid #ECEFF1;
     color:white;
+		font-size:18px;
 }
 
 
