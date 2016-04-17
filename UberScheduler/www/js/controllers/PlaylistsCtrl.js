@@ -1,6 +1,6 @@
 // console.log("Playlists Ctrl loaded"); // Feedback
 angular.module('playlistsCtrl', ['ridesService'])
-.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup, retrieveSchedule) {
+.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $state, $ionicPopup, retrieveSchedule) {
   console.log(testFunction(5));
   console.log(testVariable);
   // $scope.test = function($cordovaOauth){
@@ -67,7 +67,7 @@ angular.module('playlistsCtrl', ['ridesService'])
                 myPopup.close();
                 $scope.playlists.push({
 								 time: '9:45 AM',
-        					id: 1,
+        					id: $scope.playlists.length + 1,
         					date: new Date(2016, 20, 4),
         					repeating: false,
         					repeatedDays: [false, true, false, true, false, true, false],
@@ -75,7 +75,12 @@ angular.module('playlistsCtrl', ['ridesService'])
         				dropoff: 'Golden Gate Bridge, San Francisco, CA',
         					pickup: 'Menlo School, Atherton, CA 94027'
 								})
-
+                var index = $scope.playlists.length; // Get index of playlist
+                // Automatic redirect doens't work
+                // console.log(index);
+                // var url = 'playlists/1';
+                // $state.go("app.single", { "id": index })
+                alert("Added new ride")
 
               }
             }
@@ -83,6 +88,8 @@ angular.module('playlistsCtrl', ['ridesService'])
         });
         $scope.closepopup = function () {
           myPopup.close();
+          // Redirect to playlist
+
         }
       }
 

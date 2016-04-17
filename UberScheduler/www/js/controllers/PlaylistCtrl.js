@@ -1,6 +1,7 @@
 // console.log("Playlist Ctrl Loaded"); // Debugging
 angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'ionic-timepicker', 'ionic-datepicker'])
-.controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker, reverseGeocode, geocodeAddress, $http) {
+.controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker, reverseGeocode, geocodeAddress, $http, $state) {
+  
   // Test reverse geocoding
   reverseGeocode(34.07636433, -118.4290661);
   geocodeAddress("Salesforce Tower, San Francisco, CA 94105");
@@ -298,6 +299,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
           		console.log(resps.data.key)
           		//add key to array
           		$scope.playlists[id].key = resps.data.key;
+              $state.go('app.playlists')
             })
 
           } else { // Error
