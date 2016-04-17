@@ -21,6 +21,12 @@ angular.module('ridesService', ['ionic'])
     return playlists
   })
 
+  .factory('pushSchedule', function() {
+    return function(playlist) {
+      console.log("Pushing playlist:", playlist);
+    }
+  })
+
   .factory('timeEstimate', function() {
     return function(long, lat, uber_level) {
       baseurl = "https://sandbox-api.uber.com/v1/estimates/time"
