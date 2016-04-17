@@ -57,6 +57,20 @@
   border-color: #CFD8DC !important;
 }
 
+.button-custom {
+  background-color: #546E7A !important;
+  width: 100vw;
+  height: 60px;
+  transform: translateY(-20px);
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.bar {
+  /*Override default*/
+  padding: 0 !important;
+}
+
 .popup {
   /*Override default*/
   width: 90% !important;
