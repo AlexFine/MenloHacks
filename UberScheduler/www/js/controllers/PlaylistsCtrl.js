@@ -18,13 +18,13 @@ $scope.test = function($cordovaOauth){
     // "passwrd": storedUsername
   }).then(function (resps) {
     console.log(resps)
-  }
+  })
   var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
   $http.post(url, {
     "userID":userID
   }).then(function (resps) {
     console.log(resps)
-  }
+  })
   var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
   $http.post(url, {
     "daysOfWeek": "1",
@@ -37,7 +37,7 @@ $scope.test = function($cordovaOauth){
     "userID": "sam"
   }).then(function (resps) {
     console.log(resps)
-  }
+  })
  $scope.playlists = [
     { time: '9:45 AM', id: 1, image: 'img/Golden.jpg', dropoff: 'Golden Gate Bridge, San Francisco, CA', pickup: 'Menlo School, Atherton, CA 94027'},
     { time: '4:00 PM', id: 2, image: 'img/Art.jpg', dropoff: '755 Ocean Ave, San Francisco, CA', pickup: 'Menlo School, Atherton, CA 94027' },

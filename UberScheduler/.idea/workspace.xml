@@ -96,10 +96,10 @@
       <file leaf-file-name="PlaylistsCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+            <state relative-caret-position="302">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
-                <marker date="1460865830000" expanded="true" signature="283:540" placeholder="{...}" />
+                <marker date="1460866009000" expanded="true" signature="283:540" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -354,12 +354,12 @@
       <workItem from="1460842729282" duration="839000" />
       <workItem from="1460853893280" duration="4157000" />
       <workItem from="1460863088644" duration="554000" />
-      <workItem from="1460864701418" duration="831000" />
+      <workItem from="1460864701418" duration="929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6381000" />
+    <option name="totallyTimeSpent" value="6479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -396,7 +396,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js</url>
+          <line>32</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -445,7 +454,7 @@
         <state relative-caret-position="195">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <marker date="1460865830000" expanded="true" signature="283:540" placeholder="{...}" />
+            <marker date="1460866009000" expanded="true" signature="283:540" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -495,7 +504,7 @@
         <state relative-caret-position="195">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <marker date="1460865830000" expanded="true" signature="283:540" placeholder="{...}" />
+            <marker date="1460866009000" expanded="true" signature="283:540" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -771,10 +780,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+        <state relative-caret-position="302">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
-            <marker date="1460865830000" expanded="true" signature="283:540" placeholder="{...}" />
+            <marker date="1460866009000" expanded="true" signature="283:540" placeholder="{...}" />
           </folding>
         </state>
       </provider>
