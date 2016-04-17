@@ -48,7 +48,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -113,7 +113,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
           }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -176,7 +176,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -239,7 +239,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -316,7 +316,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -377,7 +377,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -439,7 +439,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -509,7 +509,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -570,7 +570,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -637,7 +637,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -702,7 +702,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -764,7 +764,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -824,7 +824,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -899,7 +899,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -966,7 +966,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -1172,7 +1172,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -1288,7 +1288,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -1349,7 +1349,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -1409,7 +1409,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -1464,7 +1464,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -1553,7 +1553,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -1616,7 +1616,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
           }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -1681,7 +1681,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -1756,7 +1756,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
     }
@@ -1821,7 +1821,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -1897,7 +1897,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -1961,7 +1961,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2025,7 +2025,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2150,7 +2150,7 @@
             deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2220,7 +2220,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
       return deferred.promise;
 
@@ -2286,7 +2286,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2352,7 +2352,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2412,7 +2412,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2486,7 +2486,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2550,7 +2550,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2664,7 +2664,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;
@@ -2727,7 +2727,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("uber");
       }
 
       return deferred.promise;

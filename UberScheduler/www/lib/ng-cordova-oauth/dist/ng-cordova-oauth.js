@@ -2191,6 +2191,7 @@
           }
           var browserRef = window.cordova.InAppBrowser.open('https://login.uber.com/oauth/authorize?client_id=' + clientId + '&redirect_uri=' + redirect_uri + '&response_type=token&scope=' + appScope.join(" "), '_blank', 'location=no,clearsessioncache=yes,clearcache=yes');
           browserRef.addEventListener('loadstart', function(event) {
+            console.log(event)
             if((event.url).indexOf(redirect_uri) === 0) {
               browserRef.removeEventListener("exit",function(event){});
               browserRef.close();
@@ -2216,7 +2217,7 @@
           deferred.reject("Could not find InAppBrowser plugin");
         }
       } else {
-        deferred.reject("Cannot authenticate via a web browser");
+        deferred.reject("Cannot authenticate via sdaa web browser");
       }
       return deferred.promise;
 

@@ -3,13 +3,13 @@ angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber' 
 
 .controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup, retrieveSchedule, timeEstimate, $cordovaOauth) {
 	$scope.banana = function(){
-	$cordovaOauth.uber("xUDkon_2x6pBtISsx1dj0C-O-TSRrbRR", ["email"]).then(function(result) {
+	$cordovaOauth.uber("xUDkon_2x6pBtISsx1dj0C-O-TSRrbRR", ["profile"]).then(function(result) {
     console.log("Response Object -> " + JSON.stringify(result));
 }, function(error) {
     console.log("Error -> " + error)
 });
 	}
-	
+
 
   console.log(testFunction(5));
   console.log(testVariable);
