@@ -50,16 +50,18 @@
 
         <div ng-if="!oneOn">
           <!-- Location settings -->
-						<div id="map" style="width:100%; height:200px;"></div>
-          <div class="list">
-            <label class="item item-input item-floating-label">
-                  <span class="input-label">Pickup Location</span>
-                  <input type="text" value="{{playlists[lastChar-1].pickup}}" placeholder="Pickup Location" ng-modal="pickup">
-              </label>
-              <label class="item item-input item-floating-label">
-                  <span class="input-label">Drop Off Location</span>
-                  <input type="text" value="{{playlists[lastChar-1].dropoff}}" placeholder="Drop Off Location" ng-modal="dropoff">
-              </label>
+          <div class="list">					
+						
+						<label class="item item-input  item-floating-label" style="width:100%;">
+							<span class="input-label">Drop Off Location</span>
+                           <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.pickup" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
+                        </label>
+						
+						
+						<label class="item item-input  item-floating-label" style="width:100%;">
+							<span class="input-label">Pickup Location</span>
+                           <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.dropoff" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
+                        </label>
 
           </div>
 

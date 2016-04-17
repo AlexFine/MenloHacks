@@ -73,5 +73,7 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker'])
     // Open time picker object
     ionicTimePicker.openTimePicker(timePicker);
   }
+	
+	$scope.gPlace;
 
 });

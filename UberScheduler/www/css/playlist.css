@@ -50,3 +50,17 @@
 .button_close {
   background-color: #546E7A !important; /*Override default styling*/
 }
+.search-wrapper-light {
+	font-family:Raleway;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    background: none;
+    border-radius: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.search-wrapper-light input, .search-wrapper-light input::-webkit-input-placeholder {
+	font-family:Raleway;
+    color: #ffffff;
+}
+
