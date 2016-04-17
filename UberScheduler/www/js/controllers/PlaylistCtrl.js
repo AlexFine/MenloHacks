@@ -1,10 +1,10 @@
 // console.log("Playlist Ctrl Loaded"); // Debugging
 angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'ionic-datepicker'])
 .controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker, $http) {
-		
 
-		
-		
+
+
+
   // Get playlist from service
   $scope.playlists = retrieveSchedule;
 
@@ -23,6 +23,16 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
 
   // Retrieve the schedule data from service
   $scope.playlists = retrieveSchedule;
+
+  // Set location on start
+  $scope.pickup = $scope.playlists[lastChar-1].pickup;
+  $scope.dropoff = $scope.playlists[lastChar-1].dropoff;
+
+  // Update the scope value every time there's a change
+  $scope.updatedLocation = function() {
+    $scope.pickup = document.getElementById('pickup').value;
+    $scope.dropoff = document.getElementById('dropoff').value;
+  }
 
   // Day of the week picker
   $scope.daysOfWeekLong = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -237,17 +247,22 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
   };
 
   // Setting date
-
 	$scope.gPlace;
-	
-	$scope.update = function(){
+
+	$scope.update = function() {
+    if (!$scope.oneOn) { // If in location settings
+      // Retrieving location values
+      var pickup = document.getElementById('pickup').value;
+      var dropoff = document.getElementById('dropoff').value;
+    }
+
 		var id = $scope.lastChar;
 		var date = $scope.playlists[id].date;
 		date = JSON.stringify(date);
-		
+
 		var repeatedDays = $scope.playlists[id].repeatedDays;
 		repeatedDays = JSON.stringify(repeatedDays)
-		
+
 			var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
   $http.post(url, {
 //    "userID":userID,
@@ -261,7 +276,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
 ////		"dropoff": dropoff,
 ////		"pickup": pickup
 //    // "passwrd": storedUsername
-		
+
 		"daysOfWeek": repeatedDays,
     "dropLat": '5',
     "dropLong": '10',
@@ -273,21 +288,21 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
 		"date": date,
 		"message":'sex'
 //		//EDIT THIS IF NECCESSARY
-//		
-		
+//
+
   }).then(function (resps) {
     console.log("RESPONSE" + resps)
 		console.log(resps)
 			console.log(resps.data.key)
 			//add key to array
 			$scope.playlists[id].key = resps.data.key;
-		
+
   })
-	
-	
-	
+
+
+
 	}
-	
+
 
 
 });

@@ -93,16 +93,16 @@
           <div class="list">
 						<label class="item item-input  item-floating-label" style="width:100%;">
               <span class="input-label">Drop Off Location</span>
-              <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.pickup" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
+              <input id="pickup" type="text" placeholder="{{playlists[lastChar-1].pickup}}" ng-model="pickup" googleplace="" class="ng-pristine ng-valid" autocomplete="off" ng-change="updatedLocation()"><!-- googleplace -->
             </label>
 
 						<label class="item item-input  item-floating-label" style="width:100%;">
 							<span class="input-label">Pickup Location</span>
-              <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.dropoff" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
+              <input id="dropoff" type="text" placeholder="{{playlists[lastChar-1].dropoff}}" ng-model="dropoff" googleplace="" class="ng-pristine ng-valid" autocomplete="off" ng-change="updatedLocation()"><!-- googleplace -->
             </label>
           </div>
         </div>
-        
+
   </ion-content>
   <ion-footer-bar align-title="left">
     <button class="button button-full button-custom" ng-click="update()">
