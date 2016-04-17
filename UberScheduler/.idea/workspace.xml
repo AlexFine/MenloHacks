@@ -56,11 +56,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rides.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rides.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/services/rides.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="-120">
+              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlaylistsCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlaylistCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,43 +101,33 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="840">
               <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-              <folding />
+              <folding>
+                <marker date="1460853601000" expanded="true" signature="22:316" placeholder="//..." />
+                <marker date="1460853601000" expanded="true" signature="441:905" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="477:901" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="483:601" placeholder="//..." />
+                <marker date="1460853601000" expanded="true" signature="661:784" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="811:897" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="999:1107" placeholder="{&quot;url&quot;: '/app'...}" />
+                <marker date="1460853601000" expanded="true" signature="1133:1253" placeholder="{&quot;url&quot;: '/search'...}" />
+                <marker date="1460853601000" expanded="true" signature="1166:1249" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="1189:1243" placeholder="{&quot;templateUrl&quot;: 'templates/search.html'...}" />
+                <marker date="1460853601000" expanded="true" signature="1279:1413" placeholder="{&quot;url&quot;: '/browse'...}" />
+                <marker date="1460853601000" expanded="true" signature="1316:1407" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="1341:1399" placeholder="{&quot;templateUrl&quot;: 'templates/browse.html'...}" />
+                <marker date="1460853601000" expanded="true" signature="1443:1622" placeholder="{&quot;url&quot;: '/playlists'...}" />
+                <marker date="1460853601000" expanded="true" signature="1483:1616" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="1508:1608" placeholder="{&quot;templateUrl&quot;: 'templates/playlists.html'...}" />
+                <marker date="1460853601000" expanded="true" signature="1648:1821" placeholder="{&quot;url&quot;: '/playlists/:playlistId'...}" />
+                <marker date="1460853601000" expanded="true" signature="1696:1817" placeholder="{...}" />
+                <marker date="1460853601000" expanded="true" signature="1719:1811" placeholder="{&quot;templateUrl&quot;: 'templates/playlist.html'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ionic.project" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionic.project">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -134,6 +154,7 @@
         <option value="$PROJECT_DIR$/www/templates/playlists.html" />
         <option value="$PROJECT_DIR$/www/templates/playlist.html" />
         <option value="$PROJECT_DIR$/www/js/services/rides.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -267,6 +288,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UberScheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UberScheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UberScheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UberScheduler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -277,9 +334,54 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -297,16 +399,16 @@
       <option name="presentableId" value="Default" />
       <updated>1460842728063</updated>
       <workItem from="1460842729282" duration="839000" />
-      <workItem from="1460853893280" duration="583000" />
+      <workItem from="1460853893280" duration="1182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1422000" />
+    <option name="totallyTimeSpent" value="2021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -315,7 +417,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -376,7 +478,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-          <folding />
+          <folding>
+            <marker date="1460853601000" expanded="true" signature="22:316" placeholder="//..." />
+            <marker date="1460853601000" expanded="true" signature="441:905" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="477:901" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="483:601" placeholder="//..." />
+            <marker date="1460853601000" expanded="true" signature="661:784" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="811:897" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="999:1107" placeholder="{&quot;url&quot;: '/app'...}" />
+            <marker date="1460853601000" expanded="true" signature="1133:1253" placeholder="{&quot;url&quot;: '/search'...}" />
+            <marker date="1460853601000" expanded="true" signature="1166:1249" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1189:1243" placeholder="{&quot;templateUrl&quot;: 'templates/search.html'...}" />
+            <marker date="1460853601000" expanded="true" signature="1279:1413" placeholder="{&quot;url&quot;: '/browse'...}" />
+            <marker date="1460853601000" expanded="true" signature="1316:1407" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1341:1399" placeholder="{&quot;templateUrl&quot;: 'templates/browse.html'...}" />
+            <marker date="1460853601000" expanded="true" signature="1443:1622" placeholder="{&quot;url&quot;: '/playlists'...}" />
+            <marker date="1460853601000" expanded="true" signature="1483:1616" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1508:1608" placeholder="{&quot;templateUrl&quot;: 'templates/playlists.html'...}" />
+            <marker date="1460853601000" expanded="true" signature="1648:1821" placeholder="{&quot;url&quot;: '/playlists/:playlistId'...}" />
+            <marker date="1460853601000" expanded="true" signature="1696:1817" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1719:1811" placeholder="{&quot;templateUrl&quot;: 'templates/playlist.html'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,7 +591,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-          <folding />
+          <folding>
+            <marker date="1460853601000" expanded="true" signature="22:316" placeholder="//..." />
+            <marker date="1460853601000" expanded="true" signature="441:905" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="477:901" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="483:601" placeholder="//..." />
+            <marker date="1460853601000" expanded="true" signature="661:784" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="811:897" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="999:1107" placeholder="{&quot;url&quot;: '/app'...}" />
+            <marker date="1460853601000" expanded="true" signature="1133:1253" placeholder="{&quot;url&quot;: '/search'...}" />
+            <marker date="1460853601000" expanded="true" signature="1166:1249" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1189:1243" placeholder="{&quot;templateUrl&quot;: 'templates/search.html'...}" />
+            <marker date="1460853601000" expanded="true" signature="1279:1413" placeholder="{&quot;url&quot;: '/browse'...}" />
+            <marker date="1460853601000" expanded="true" signature="1316:1407" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1341:1399" placeholder="{&quot;templateUrl&quot;: 'templates/browse.html'...}" />
+            <marker date="1460853601000" expanded="true" signature="1443:1622" placeholder="{&quot;url&quot;: '/playlists'...}" />
+            <marker date="1460853601000" expanded="true" signature="1483:1616" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1508:1608" placeholder="{&quot;templateUrl&quot;: 'templates/playlists.html'...}" />
+            <marker date="1460853601000" expanded="true" signature="1648:1821" placeholder="{&quot;url&quot;: '/playlists/:playlistId'...}" />
+            <marker date="1460853601000" expanded="true" signature="1696:1817" placeholder="{...}" />
+            <marker date="1460853601000" expanded="true" signature="1719:1811" placeholder="{&quot;templateUrl&quot;: 'templates/playlist.html'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -497,10 +639,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/services/rides.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        <state relative-caret-position="-120">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
