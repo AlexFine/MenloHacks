@@ -23,9 +23,22 @@
               Pickup<br>Time
             </div>
             <div class="form-content">
-              <a ng-click="editTime(lastChar)">
+              <a ng-click="editTime()">
                 <p class="time-edit">
                   {{playlists[lastChar-1].time}}
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div class="form-item date-item">
+            <div class="form-label">
+              Date
+            </div>
+            <div class="form-content">
+              <a ng-click="editDate()">
+                <p class="date-edit">
+                  {{playlists[lastChar-1].date | date : 'MMMM d, yyyy'}}
                 </p>
               </a>
             </div>
@@ -56,30 +69,21 @@
               </div>
             </div>
           </div>
-
-
         </div>
 
         <div ng-if="!oneOn">
           <!-- Location settings -->
-          <div class="list">					
-						
+          <div class="list">
 						<label class="item item-input  item-floating-label" style="width:100%;">
-							<span class="input-label">Drop Off Location</span>
-                           <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.pickup" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
-                        </label>
-						
-						
+              <span class="input-label">Drop Off Location</span>
+              <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.pickup" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
+            </label>
+
 						<label class="item item-input  item-floating-label" style="width:100%;">
 							<span class="input-label">Pickup Location</span>
-                           <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.dropoff" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
-                        </label>
-
+              <input type="text" placeholder="Enter your home address, Apt# and ZIP" ng-model="user.dropoff" googleplace="" class="ng-pristine ng-valid" autocomplete="off"><!-- googleplace -->
+            </label>
           </div>
-
-
-
-
         </div>
 
 

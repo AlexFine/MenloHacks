@@ -21,6 +21,16 @@
   line-height: 48px;
 }
 
+.date-item {
+  margin-top: 40px;
+}
+
+.date-edit {
+  font-size: 32px;
+  color: black;
+  line-height: 32px;
+}
+
 .repeat-setting {
   margin-top: 75px;
 }
@@ -49,6 +59,73 @@
 
 .day-positive {
   background-color: #B0BEC5;
+}
+
+/*Ionic Date Picker Components*/
+.selected_date_full {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_set {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_today {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.button_close {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.prev_btn_section {
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.next_btn_section {
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.select_section {
+
+}
+
+.month_select {
+  border-color: #CFD8DC !important; /*Override default styling*/
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.year_select {
+  border-color: #CFD8DC !important; /*Override default styling*/
+  color: #CFD8DC !important; /*Override default styling*/
+  border-color: #CFD8DC !important; /*Override default styling*/
+  border-bottom-color: #CFD8DC !important; /*Override default styling*/
+}
+
+.calendar_grid {
+
+}
+
+.weeks_row {
+
+}
+
+.selected_date {
+  background-color: #546E7A !important; /*Override default styling*/
+}
+
+.date_col {
+
+}
+
+.today {
+  border-color: #CFD8DC !important; /*Override default styling*/
 }
 
 /*Ionic Time Picker Components*/
@@ -92,4 +169,3 @@
 	font-family:Raleway;
     color: #ffffff;
 }
-

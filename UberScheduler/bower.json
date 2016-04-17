@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ionic-timepicker": "^0.5.0",
-    "ng-cordova-oauth": "~0.2.5"
+    "ng-cordova-oauth": "~0.2.5",
+    "ionic-datepicker": "^1.1.0"
   }
 }

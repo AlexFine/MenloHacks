@@ -16,6 +16,7 @@ angular.module('ridesService', ['ionic'])
       {
         time: '9:45 AM',
         id: 1,
+        date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
         image: 'img/Golden.jpg',
@@ -25,6 +26,7 @@ angular.module('ridesService', ['ionic'])
       {
         time: '4:00 PM',
         id: 2,
+        date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
         image: 'img/Art.jpg',
@@ -34,6 +36,7 @@ angular.module('ridesService', ['ionic'])
       {
         time: '6:30 PM',
         id: 3,
+        date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
         image: 'img/Land.jpg',
@@ -43,6 +46,7 @@ angular.module('ridesService', ['ionic'])
       {
         time: '5:00 AM',
         id: 4,
+        date: new Date(2016, 20, 4),
         repeating: false,
         repeatedDays: [false, true, false, true, false, true, false],
         image: 'img/Salesforce.jpg',
@@ -88,10 +92,10 @@ angular.module('ridesService', ['ionic'])
                 componentRestrictions: {}
             };
             scope.gPlace = new google.maps.places.Autocomplete(element[0], options);
- 
+
             google.maps.event.addListener(scope.gPlace, 'place_changed', function() {
                 scope.$apply(function() {
-                    model.$setViewValue(element.val());                
+                    model.$setViewValue(element.val());
                 });
             });
         }

@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic-timepicker'])
+angular.module('starter.controllers', ['ionic-timepicker', 'ionic-datepicker'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
