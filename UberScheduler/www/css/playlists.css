@@ -37,6 +37,8 @@ h1{
     font-family: 'Raleway', sans-serif;
     font-weight:bold;
     color:white;
+		height:50px;
+		border-bottom: 0px solid #546E7A;
 }
 a{
     text-decoration: none;
@@ -45,6 +47,8 @@ a{
     height:50px;
     background-color:#546E7A;
     color:white;
+		overflow:auto;
+		overflow:hidden
 }
 .onebar {
     text-align:center;
