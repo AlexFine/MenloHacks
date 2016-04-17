@@ -14,3 +14,7 @@ dl, dd, ol, ul, figure {
 body {
 	font-family:Raleway;
 }
+
+.background, .background .pane, .background .item, .background .item-complex .item-content{
+    background-color: #546E7A;
+}
