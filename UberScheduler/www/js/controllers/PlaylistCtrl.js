@@ -4,6 +4,7 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker'])
   // Get playlist from service
   $scope.playlists = retrieveSchedule;
 
+<<<<<<< HEAD
   // For tabs
   $scope.oneOn = true;
   $scope.toggleTab = function(){
@@ -16,6 +17,9 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker'])
   var currentpage = window.location.href;
   var lastChar = currentpage.charAt(currentpage.length - 1);
   $scope.lastChar = lastChar;
+
+  // Retrieve the schedule data from service
+  $scope.playlists = retrieveSchedule;
 
   // Create time picker object
   // Time picker documentation: https://github.com/rajeshwarpatlolla/ionic-timepicker
