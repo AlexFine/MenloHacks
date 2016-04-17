@@ -103,52 +103,53 @@ angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth'])
         }
       }
 
-  $scope.apple = function(){
-    baseurl = "https://sandbox-api.uber.com/v1/estimates/price"
+      // Fare estimate
+      $scope.apple = function() {
+        baseurl = "https://sandbox-api.uber.com/v1/estimates/price"
 
-    parameters = {
-      'server_token': 'ikGvlAJSejPSY6bUp7APhxkwyu5ermguZnreUaCd',
-      'start_latitude': lat,
-      'start_longitude': long,
-      'end_latitude': end_lat,
-      'end_longitude': end_long,
+        parameters = {
+          'server_token': 'ikGvlAJSejPSY6bUp7APhxkwyu5ermguZnreUaCd',
+          'start_latitude': lat,
+          'start_longitude': long,
+          'end_latitude': end_lat,
+          'end_longitude': end_long,
+        }
+
+        url = baseurl + "?" + "server_token=" + parameters['server_token'] + "&start_latitude=" + parameters[
+            'start_latitude'] + "&start_longitude=" + parameters['start_longitude']+"&end_latitude=" + parameters[
+            'end_latitude'] + "&end_longitude=" + parameters['end_longitude']
+        $http.get(url).success(function(data){
+          console.log(data)
+        })
+      }
+
+    	$scope.strawberry = function(){
+    		console.log("HELLO I AM HERE FIND ME HELLO");
+    		 var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
+      var userID = "sam"
+
+    		$http.post(url, {
+        "userID":userID
+      }).then(function (resps) {
+        console.log(resps)
+    		//console.log(resps.data.rides.length);
+    			for(var i = 0; i < resps.data.rides.length; i++){
+    				console.log(i);
+
+    				//console.log(dropLat.toString())
+    				$scope.playlists.push({
+    								 time: resps.data.rides[i].time,
+            					id: i,
+            					date: resps.data.rides[i].date,
+            					repeating: false,
+            					repeatedDays: resps.data.rides[i].daysOfWeek,
+            					image: 'img/Golden.jpg',
+            				dropoff: 'Golden Gate Bridge, San Francisco, CA (' + resps.data.rides[i].dropLat + ',' + resps.data.rides[i].dropLong + ')',
+            					pickup: 'Menlo School, Atherton, CA 94027 (' + resps.data.rides[i].pickLat + ',' + resps.data.rides[i].pickLong + ')'
+    								})
+    			}
+
+    			$scope.$broadcast('scroll.refreshComplete');
+      })
     }
-
-    url = baseurl + "?" + "server_token=" + parameters['server_token'] + "&start_latitude=" + parameters[
-        'start_latitude'] + "&start_longitude=" + parameters['start_longitude']+"&end_latitude=" + parameters[
-        'end_latitude'] + "&end_longitude=" + parameters['end_longitude']
-    $http.get(url).success(function(data){
-      console.log(data)
-    })
-  }
-
-	$scope.strawberry = function(){
-		console.log("HELLO I AM HERE FIND ME HELLO");
-		 var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
-  var userID = "sam"
-
-		$http.post(url, {
-    "userID":userID
-  }).then(function (resps) {
-    console.log(resps)
-		//console.log(resps.data.rides.length);
-			for(var i = 0; i < resps.data.rides.length; i++){
-				console.log(i);
-
-				//console.log(dropLat.toString())
-				$scope.playlists.push({
-								 time: resps.data.rides[i].time,
-        					id: i,
-        					date: resps.data.rides[i].date,
-        					repeating: false,
-        					repeatedDays: resps.data.rides[i].daysOfWeek,
-        					image: 'img/Golden.jpg',
-        				dropoff: 'Golden Gate Bridge, San Francisco, CA (' + resps.data.rides[i].dropLat + ',' + resps.data.rides[i].dropLong + ')',
-        					pickup: 'Menlo School, Atherton, CA 94027 (' + resps.data.rides[i].pickLat + ',' + resps.data.rides[i].pickLong + ')'
-								})
-			}
-
-			$scope.$broadcast('scroll.refreshComplete');
-  })
-	}
 })

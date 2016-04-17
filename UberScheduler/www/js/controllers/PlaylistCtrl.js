@@ -1,7 +1,7 @@
 // console.log("Playlist Ctrl Loaded"); // Debugging
 angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'ionic-timepicker', 'ionic-datepicker'])
 .controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker, reverseGeocode, geocodeAddress, $http, $state) {
-  
+
   // Test reverse geocoding
   reverseGeocode(34.07636433, -118.4290661);
   geocodeAddress("Salesforce Tower, San Francisco, CA 94105");
@@ -247,6 +247,82 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
     ionicDatePicker.openDatePicker(datepicker); // Open date picker object
   };
 
+  $scope.loading = false;
+  // An alert dialog
+  $scope.showFareEstimate = function() {
+    // Do geocode lookups
+    $scope.loading = true;
+    var address = $scope.pickup;
+    console.log("Geocode started");
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({'address': address}, function(results, status) {
+      console.log("Geo finished");
+      if (status === google.maps.GeocoderStatus.OK) { // Success
+        var position = results[0].geometry.location;
+        var pickupLat = position.lat();
+        var pickupLng = position.lng();
+
+        var address = $scope.dropoff;
+        console.log("Geocode 2 started");
+        geocoder.geocode({'address': address}, function(results, status) {
+          console.log("Geo 2 finished");
+          if (status === google.maps.GeocoderStatus.OK) { // Success
+            var position2 = results[0].geometry.location;
+            var dropLat = position2.lat();
+            var dropLng = position2.lng();
+            console.log("Geocoding 2 successful", dropLat, dropLng);
+            console.log("Geocoding 1 successful", pickupLat, pickupLng);
+
+            baseurl = "https://sandbox-api.uber.com/v1/estimates/price"
+
+            parameters = {
+              'server_token': 'ikGvlAJSejPSY6bUp7APhxkwyu5ermguZnreUaCd',
+              'start_latitude': pickupLat,
+              'start_longitude': pickupLng,
+              'end_latitude': dropLat,
+              'end_longitude': dropLng
+            }
+
+            url = baseurl + "?" + "server_token=" + parameters['server_token'] + "&start_latitude=" + parameters[
+                'start_latitude'] + "&start_longitude=" + parameters['start_longitude']+"&end_latitude=" + parameters[
+                'end_latitude'] + "&end_longitude=" + parameters['end_longitude']
+            $http.get(url).success(function(data) { // Callback
+              // Success
+              console.log(data);
+              var uberX = data.prices[0];
+              var time = Math.round(uberX.duration/60); // Time in minutes
+              var template = "<div class='fare-estimate'>";
+              template += uberX.estimate;
+              template += "</div><div class='ride-details'>";
+              template += uberX.distance;
+              template += " Miles <br>"
+              template += time;
+              template += " Minutes</div>"
+
+              $scope.loading = false; // Stop spinner
+
+              var alertPopup = $ionicPopup.alert({
+                title: 'Fare Estimate',
+                template: template
+              });
+
+              alertPopup.then(function(res) {
+                console.log('Closing modal');
+              });
+
+            })
+          } else { // Error
+            alert('Geocode was not successful for the following reason: ' + status);
+            $state.go('app.playlists')
+          }
+        });
+      } else { // Error
+        alert('Geocode was not successful for the following reason: ' + status);
+        $state.go('app.playlists')
+      }
+    });
+  };
+
   // Setting date
 	$scope.gPlace;
 
@@ -287,7 +363,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
               "dropLong": dropLng,
               "timeSec": "3",
               "pickLat": pickupLat,
-              "time":$scope.playlists[id].time,
+              "time": $scope.playlists[id].time,
               "pickLong": pickupLng,
               "userID": "sam",
             	"date": date,
@@ -304,10 +380,12 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
 
           } else { // Error
             alert('Geocode was not successful for the following reason: ' + status);
+            $state.go('app.playlists')
           }
         });
       } else { // Error
         alert('Geocode was not successful for the following reason: ' + status);
+        $state.go('app.playlists')
       }
     });
 	}

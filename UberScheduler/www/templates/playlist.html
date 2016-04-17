@@ -100,8 +100,16 @@
 							<span class="input-label">Pickup Location</span>
               <input id="dropoff" type="text" placeholder="{{playlists[lastChar-1].dropoff}}" ng-model="dropoff" googleplace="" class="ng-pristine ng-valid" autocomplete="off" ng-change="updatedLocation()"><!-- googleplace -->
             </label>
+
+            <div class="item" style="width:100%;">
+              <div ng-click="showFareEstimate()">
+                Fare Estimate
+              </div>
+            </div>
           </div>
         </div>
+
+        <ion-spinner icon="lines" class="loading-spinner" ng-show="loading"></ion-spinner>
 
   </ion-content>
   <ion-footer-bar align-title="left">

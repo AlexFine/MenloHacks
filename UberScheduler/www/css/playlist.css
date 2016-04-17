@@ -57,6 +57,37 @@
   border-color: #CFD8DC !important;
 }
 
+.popup-container .popup {
+  /*Override default opacity setting*/
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.loading-spinner {
+  position: absolute;
+  z-index: 9999; /*Always top*/
+  top: 240px;
+  left: 50%;
+  transform: translateX(-37.5px);
+}
+
+.spinner svg {
+  width: 75px;
+  height: 75px;
+}
+
+.fare-estimate {
+  text-align: center;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.ride-details {
+  padding-top: 12px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .location-item {
   padding-bottom: 20px;
 }
