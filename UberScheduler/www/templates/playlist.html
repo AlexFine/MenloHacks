@@ -18,57 +18,68 @@
     </div>
         <div ng-if="oneOn">
           <!-- General settings -->
-          <div class="form-item">
-            <div class="form-label">
-              Pickup<br>Time
-            </div>
-            <div class="form-content">
-              <a ng-click="editTime()">
-                <p class="time-edit">
-                  {{playlists[lastChar-1].time}}
-                </p>
-              </a>
-            </div>
-          </div>
+          <ul class="list">
+              <li class="item">
+                <div class="form-label">
+                  Pickup<br>Time
+                </div>
+                <div class="form-content">
+                  <a ng-click="editTime()">
+                    <p class="content-edit">
+                      {{playlists[lastChar-1].time}}
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="item">
+                <div class="form-label">
+                  Date
+                </div>
+                <div class="form-content">
+                  <a ng-click="editDate()">
+                    <p class="content-edit">
+                      {{playlists[lastChar-1].date | date : 'MMMM d, yyyy'}}
+                    </p>
+                  </a>
+                </div>
+              </li>
+              <li class="item">
+                <div class="form-label" style="float: right">
+                  <label class="toggle" style="float: right">
+                     <input type="checkbox" ng-model="repeating"
+                      ng-true-value="true" ng-false-value="false"
+                      ng-init="initialRepeat()" ng-click="changedRepeat()">
+                     <div class="track">
+                       <div class="handle"></div>
+                     </div>
+                  </label>
+                </div>
+                <div class="form-content">
+                  <p class="content-edit">
+                    Recurring Schedule
+                    <span id="repeatingCheckboxVal" class="feedback">{{repeating}}</span>
+                  </p>
+                </div>
+              </li>
+              <li class="item configure-button" ng-click="showPopup()">
+                  Configure Schedule<span ng-show="showColon()">:</span>
+                  <span ng-repeat="day in playlists[lastChar-1].repeatedDays track by $index">
+                    <span ng-show="day">
+                      {{daysOfWeekShort[$index]}}
+                    </span>
+                  </span>
+              </li>
+          </ul>
 
-          <div class="form-item date-item">
-            <div class="form-label">
-              Date
-            </div>
-            <div class="form-content">
-              <a ng-click="editDate()">
-                <p class="date-edit">
-                  {{playlists[lastChar-1].date | date : 'MMMM d, yyyy'}}
-                </p>
-              </a>
-            </div>
-          </div>
 
-          <div class="form-item repeat-setting">
-            <div class="form-label">
-              <label class="toggle">
-                 <input type="checkbox" ng-model="repeating"
-                  ng-true-value="true" ng-false-value="false" ng-init="initialRepeat()" ng-click="changedRepeat()">
-                 <div class="track">
-                   <div class="handle"></div>
-                 </div>
-              </label>
-            </div>
-            <div class="form-content">
-              <p class="repeat-toggle-label">
-                Repeating Schedule
-                <span id="repeatingCheckboxVal" class="feedback">{{repeating}}</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="row repeated-day-picker">
+          <!-- <div class="row repeated-day-picker">
             <div class="col" ng-repeat="day in playlists[lastChar-1].repeatedDays track by $index">
               <div class="day-button" ng-class="(day ? 'day-positive' : 'day-negative')" ng-click="toggleRepeatedDay($index)">
                 {{daysOfWeekShort[$index]}}
               </div>
             </div>
-          </div>
+          </div> -->
+
         </div>
 
         <div ng-if="!oneOn">

@@ -1,29 +1,22 @@
-.form-item {
-  padding: 24px;
-}
-
 .form-label {
-  width: 20%;
+  width: 30%;
   float: left;
-  font-size: 16px;
-  padding: 6px;
+  font-size: 24px;
+  line-height: 24px;
   color: #00B9E6;
 }
 
 .form-content {
-  width: 80%;
+  width: 70%;
   float: right;
 }
 
-.time-edit {
-  font-size: 48px;
+.content-edit {
+  font-size: 24px !important;
+  line-height: 24px;
   color: black;
-  line-height: 48px;
 }
 
-.date-item {
-  margin-top: 40px;
-}
 
 .date-edit {
   font-size: 32px;
@@ -31,17 +24,14 @@
   line-height: 32px;
 }
 
-.repeat-setting {
-  margin-top: 75px;
-}
-
-.repeat-toggle-label {
-  font-size: 20px;
-  line-height: 30px;
-}
-
 .feedback {
   display: none;
+}
+
+.configure-button {
+  /*background-color: #90A4AE;*/
+  /*color: white;*/
+  text-align: left;
 }
 
 .repeated-day-picker {

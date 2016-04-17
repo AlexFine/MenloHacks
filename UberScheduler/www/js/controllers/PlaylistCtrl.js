@@ -1,6 +1,6 @@
 // console.log("Playlist Ctrl Loaded"); // Debugging
-angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker', 'ionic-datepicker'])
-.controller('PlaylistCtrl', function($scope, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker) {
+angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'ionic-datepicker'])
+.controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker) {
   // Get playlist from service
   $scope.playlists = retrieveSchedule;
 
@@ -23,6 +23,13 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker', 'ionic-datep
   // Day of the week picker
   $scope.daysOfWeekLong = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   $scope.daysOfWeekShort = ["S", "M", "T", "W", "T", "F", "S"];
+  $scope.showColon = function() { // To decide if showing a colon
+    for(var i; i < 7; i++) { // Cycle
+      if (playlists[lastChar-1].repeatedDays[i] == 'true') {
+        return true
+      }
+    }
+  }
   $scope.toggleRepeatedDay = function(index) {
     // console.log(index); // Debugging
     var oldPlaylist = retrieveSchedule[lastChar-1]; // Store old
@@ -43,7 +50,44 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker', 'ionic-datep
     pushSchedule(updatedPlaylist); // Push to server
   }
 
-  // Repeat toggle switch value
+  $scope.data = [true, true, false, true, false, true, true];
+  // Repeating day toggle switch value
+  $scope.showPopup = function() {
+    var repeatedDays = retrieveSchedule[lastChar-1].repeatedDays;
+    var template = "<ion-list>";
+    for (var i = 0; i < repeatedDays.length; i++) { // Repeat for all days of week
+      template += "<ion-checkbox ng-model='data[";
+      template += i;
+      template += "]'>";
+      template += $scope.daysOfWeekLong[i];
+      template += "</ion-checkbox>";
+    }
+    template += "</ion-list>";
+
+    var schedulePopup = $ionicPopup.show({
+      template: template,
+      title: 'Enter Wi-Fi Password',
+      subTitle: 'Please use normal things',
+      scope: $scope,
+      buttons: [
+        { text: 'Cancel' },
+        {
+          text: '<b>Save</b>',
+          type: 'button-positive',
+          onTap: function(e) {
+            if (false) {
+              // Will never trigger
+              e.preventDefault();
+            } else {
+              console.log($scope.data);
+              return repeatedDays;
+            }
+          }
+        }
+      ]
+    });
+  }
+
   $scope.repeating = false; // Initial value
   $scope.initialRepeat = function() {
     $scope.repeating = retrieveSchedule[lastChar-1].repeating;
