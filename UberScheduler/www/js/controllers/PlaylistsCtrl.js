@@ -40,7 +40,7 @@ angular.module('playlistsCtrl', ['ridesService'])
   // })
 	$scope.playlists = retrieveSchedule;
 
-	
+
 		$scope.addRide = function(){
 			console.log("hello")
         var myPopup = $ionicPopup.show({
@@ -48,14 +48,14 @@ angular.module('playlistsCtrl', ['ridesService'])
           title: "Add Ride",
           scope: $scope,
           buttons: [
-            
+
             {
               text: 'Cancel',
               type: 'button-stable',
               onTap: function () {
                 console.log("hello2");
                 myPopup.close();
-              
+
 
               }
             },
@@ -85,12 +85,12 @@ angular.module('playlistsCtrl', ['ridesService'])
           myPopup.close();
         }
       }
-	
+
 	$scope.strawberry = function(){
 		console.log("HELLO I AM HERE FIND ME HELLO");
 		 var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
   var userID = "sam"
-		
+
 		$http.post(url, {
     "userID":userID
   }).then(function (resps) {
@@ -98,7 +98,7 @@ angular.module('playlistsCtrl', ['ridesService'])
 		//console.log(resps.data.rides.length);
 			for(var i = 0; i < resps.data.rides.length; i++){
 				console.log(i);
-				
+
 				//console.log(dropLat.toString())
 				$scope.playlists.push({
 								 time: resps.data.rides[i].time,
@@ -111,7 +111,7 @@ angular.module('playlistsCtrl', ['ridesService'])
         					pickup: 'Menlo School, Atherton, CA 94027 (' + resps.data.rides[i].pickLat + ',' + resps.data.rides[i].pickLong + ')'
 								})
 			}
-			
+
 			$scope.$broadcast('scroll.refreshComplete');
   })
 	}

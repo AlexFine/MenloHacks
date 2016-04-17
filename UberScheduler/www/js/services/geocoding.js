@@ -41,6 +41,7 @@ angular.module('geocodingService', ['ionic'])
           var lat = position.lat();
           var lng = position.lng();
           console.log("Geooding successful", lat, lng);
+          return [lat, lng]
         } else { // Error
           alert('Geocode was not successful for the following reason: ' + status);
         }

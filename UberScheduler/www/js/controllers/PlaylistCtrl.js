@@ -250,59 +250,63 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
 	$scope.gPlace;
 
 	$scope.update = function() {
-    if (!$scope.oneOn) { // If in location settings
-      // Retrieving location values
-      var pickup = document.getElementById('pickup').value;
-      var dropoff = document.getElementById('dropoff').value;
-    }
 
-		var id = $scope.lastChar;
-		var date = $scope.playlists[id].date;
-		date = JSON.stringify(date);
+    var address = $scope.pickup;
+    console.log("Geocode started");
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({'address': address}, function(results, status) {
+      console.log("Geo finished");
+      if (status === google.maps.GeocoderStatus.OK) { // Success
+        var position = results[0].geometry.location;
+        var pickupLat = position.lat();
+        var pickupLng = position.lng();
 
-		var repeatedDays = $scope.playlists[id].repeatedDays;
-		repeatedDays = JSON.stringify(repeatedDays)
+        var address = $scope.dropoff;
+        console.log("Geocode 2 started");
+        geocoder.geocode({'address': address}, function(results, status) {
+          console.log("Geo 2 finished");
+          if (status === google.maps.GeocoderStatus.OK) { // Success
+            var position2 = results[0].geometry.location;
+            var dropLat = position2.lat();
+            var dropLng = position2.lng();
+            console.log("Geocoding 2 successful", dropLat, dropLng);
+            console.log("Geocoding 1 successful", pickupLat, pickupLng);
 
-			var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
-  $http.post(url, {
-//    "userID":userID,
-////    "message":email,
-////		//SAM YOU NEED TO TELL ME EXACTLY WHAT NEEDS TO BE PASSED HERE
-////		"time":time,
-////		"date":date,
-////		"repeating":repeating,
-////		"repeatedDays":repeatedDays,
-////		"image":image,
-////		"dropoff": dropoff,
-////		"pickup": pickup
-//    // "passwrd": storedUsername
+            var id = $scope.lastChar;
+        		var date = $scope.playlists[id].date;
+        		date = JSON.stringify(date);
 
-		"daysOfWeek": repeatedDays,
-    "dropLat": '5',
-    "dropLong": '10',
-    "timeSec": "3",
-    "pickLat": '5',
-    "time":$scope.playlists[id].time,
-    "pickLong": '2',
-    "userID": "Kevin",
-		"date": date,
-		"message":'Hello world'
-//		//EDIT THIS IF NECCESSARY
-//
+        		var repeatedDays = $scope.playlists[id].repeatedDays;
+        		repeatedDays = JSON.stringify(repeatedDays)
 
-  }).then(function (resps) {
-    console.log("RESPONSE" + resps)
-		console.log(resps)
-			console.log(resps.data.key)
-			//add key to array
-			$scope.playlists[id].key = resps.data.key;
+        		var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
+            $http.post(url, {
+              "daysOfWeek": repeatedDays,
+              "dropLat": dropLat,
+              "dropLong": dropLng,
+              "timeSec": "3",
+              "pickLat": pickupLat,
+              "time":$scope.playlists[id].time,
+              "pickLong": pickupLng,
+              "userID": "sam",
+            	"date": date,
+            	"message":'Hello world'
+              // EDIT THIS IF NECCESSARY
+            }).then(function (resps) {
+              console.log("RESPONSE" + resps)
+          		console.log(resps)
+          		console.log(resps.data.key)
+          		//add key to array
+          		$scope.playlists[id].key = resps.data.key;
+            })
 
-  })
-
-
-
+          } else { // Error
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      } else { // Error
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
 	}
-
-
-
 });
