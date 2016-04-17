@@ -1,12 +1,12 @@
 // console.log("Playlists Ctrl loaded"); // Feedback
-angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth'])
+angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth', 'oauth.uber' ])
 
 .controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup, retrieveSchedule, timeEstimate, $cordovaOauth) {
 	$scope.banana = function(){
 	$cordovaOauth.uber("xUDkon_2x6pBtISsx1dj0C-O-TSRrbRR", ["email"]).then(function(result) {
     console.log("Response Object -> " + JSON.stringify(result));
 }, function(error) {
-    console.log("Error -> " + error);
+    console.log("Error -> " + error)
 });
 	}
 	

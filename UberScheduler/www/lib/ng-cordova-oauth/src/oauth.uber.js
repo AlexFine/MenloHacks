@@ -39,11 +39,13 @@
               for(var i = 0; i < responseParameters.length; i++) {
                 parameterMap[responseParameters[i].split("=")[0]] = responseParameters[i].split("=")[1];
               }
+							console.log(event)
 
               if(parameterMap.access_token !== undefined && parameterMap.access_token !== null) {
                 deferred.resolve({ access_token: parameterMap.access_token, token_type: parameterMap.token_type, expires_in: parameterMap.expires_in, scope: parameterMap.scope });
               } else {
-                deferred.reject("Problem authenticating");
+								console.log(event)
+                deferred.reject("Problem authsenticating");
               }
             }
           });

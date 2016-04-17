@@ -2189,11 +2189,14 @@
               redirect_uri = options.redirect_uri;
             }
           }
+					console.log("test")
           var browserRef = window.cordova.InAppBrowser.open('https://login.uber.com/oauth/authorize?client_id=' + clientId + '&redirect_uri=' + redirect_uri + '&response_type=token&scope=' + appScope.join(" "), '_blank', 'location=no,clearsessioncache=yes,clearcache=yes');
           browserRef.addEventListener('loadstart', function(event) {
+						console.log("test")
             if((event.url).indexOf(redirect_uri) === 0) {
               browserRef.removeEventListener("exit",function(event){});
               browserRef.close();
+							console.log("test")
               var callbackResponse = (event.url).split("#")[1];
               var responseParameters = (callbackResponse).split("&");
               var parameterMap = [];
@@ -2205,7 +2208,8 @@
               if(parameterMap.access_token !== undefined && parameterMap.access_token !== null) {
                 deferred.resolve({ access_token: parameterMap.access_token, token_type: parameterMap.token_type, expires_in: parameterMap.expires_in, scope: parameterMap.scope });
               } else {
-                deferred.reject("Problem authenticating");
+								console.log("test")
+                deferred.reject("Problem authsenticating");
               }
             }
           });
