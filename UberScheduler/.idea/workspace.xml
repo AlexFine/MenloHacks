@@ -25,8 +25,16 @@
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <marker date="1460860687000" expanded="true" signature="129:448" placeholder="//..." />
+                <marker date="1460860687000" expanded="true" signature="662:693" placeholder="{...}" />
+                <marker date="1460860687000" expanded="true" signature="776:806" placeholder="{...}" />
+                <marker date="1460860687000" expanded="true" signature="863:893" placeholder="{...}" />
+                <marker date="1460860687000" expanded="true" signature="993:1223" placeholder="{...}" />
+                <marker date="1460860687000" expanded="true" signature="1050:1152" placeholder="//..." />
+                <marker date="1460860687000" expanded="true" signature="1177:1211" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+            <state relative-caret-position="233">
+              <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -71,13 +79,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaylistsCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlaylistsCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+            <state relative-caret-position="195">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
               <folding>
-                <marker date="1460858142000" expanded="true" signature="262:519" placeholder="{...}" />
+                <marker date="1460860687000" expanded="true" signature="277:534" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -95,9 +103,9 @@
         <option value="$PROJECT_DIR$/www/templates/playlists.html" />
         <option value="$PROJECT_DIR$/www/js/controllers/PlaylistCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/lib/ng-cordova-oauth/dist/ng-cordova-oauth.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -302,16 +310,16 @@
       <option name="presentableId" value="Default" />
       <updated>1460842728063</updated>
       <workItem from="1460842729282" duration="839000" />
-      <workItem from="1460853893280" duration="3648000" />
+      <workItem from="1460853893280" duration="4157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4487000" />
+    <option name="totallyTimeSpent" value="4996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -321,7 +329,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -352,7 +360,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1460860687000" expanded="true" signature="129:448" placeholder="//..." />
+            <marker date="1460860687000" expanded="true" signature="662:693" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="776:806" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="863:893" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="993:1223" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="1050:1152" placeholder="//..." />
+            <marker date="1460860687000" expanded="true" signature="1177:1211" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -449,7 +465,7 @@
         <state relative-caret-position="-120">
           <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
           <folding>
-            <marker date="1460855693000" expanded="true" signature="980:984" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="995:999" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -595,7 +611,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,14 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -635,18 +643,34 @@
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1460860687000" expanded="true" signature="129:448" placeholder="//..." />
+            <marker date="1460860687000" expanded="true" signature="662:693" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="776:806" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="863:893" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="993:1223" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="1050:1152" placeholder="//..." />
+            <marker date="1460860687000" expanded="true" signature="1177:1211" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/PlaylistsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        <state relative-caret-position="195">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <marker date="1460858142000" expanded="true" signature="262:519" placeholder="{...}" />
+            <marker date="1460860687000" expanded="true" signature="277:534" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
