@@ -12,6 +12,8 @@ angular.module('ridesService', ['ionic'])
   })
 
   .factory('retrieveSchedule', function() {
+    // Pull from server
+
     var playlists = [
       {
         time: '9:45 AM',
@@ -60,6 +62,7 @@ angular.module('ridesService', ['ionic'])
   .factory('pushSchedule', function() {
     return function(playlist) {
       console.log("Pushing playlist:", playlist);
+      // Push to server
     }
   })
 

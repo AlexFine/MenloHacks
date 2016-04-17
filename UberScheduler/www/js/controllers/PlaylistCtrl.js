@@ -86,6 +86,9 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker', 'ionic-datep
         } else if (hour == 12) {
           str = "PM"
         }
+        if (hour == 0) {
+          hour = 12; // Fix the 0 hour issue
+        }
         var minutes = selectedTime.getUTCMinutes();
         if (minutes < 10) {
           minutes = "0" + minutes;
