@@ -328,7 +328,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
 	$scope.gPlace;
 
 	$scope.update = function() {
-
+    $scope.loading = true;
     var address = $scope.pickup;
     console.log("Geocode started");
     var geocoder = new google.maps.Geocoder();
@@ -376,6 +376,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
           		console.log(resps.data.key)
           		//add key to array
           		$scope.playlists[id].key = resps.data.key;
+              $scope.loading = false;
               $state.go('app.playlists')
             })
 
