@@ -86,5 +86,33 @@ angular.module('playlistsCtrl', ['ridesService'])
         }
       }
 	
-	
+	$scope.strawberry = function(){
+		console.log("HELLO I AM HERE FIND ME HELLO");
+		 var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
+  var userID = "sam"
+		
+		$http.post(url, {
+    "userID":userID
+  }).then(function (resps) {
+    console.log(resps)
+		//console.log(resps.data.rides.length);
+			for(var i = 0; i < resps.data.rides.length; i++){
+				console.log(i);
+				
+				//console.log(dropLat.toString())
+				$scope.playlists.push({
+								 time: resps.data.rides[i].time,
+        					id: i,
+        					date: resps.data.rides[i].date,
+        					repeating: false,
+        					repeatedDays: resps.data.rides[i].daysOfWeek,
+        					image: 'img/Golden.jpg',
+        				dropoff: 'Golden Gate Bridge, San Francisco, CA (' + resps.data.rides[i].dropLat + ',' + resps.data.rides[i].dropLong + ')',
+        					pickup: 'Menlo School, Atherton, CA 94027 (' + resps.data.rides[i].pickLat + ',' + resps.data.rides[i].pickLong + ')'
+								})
+			}
+			
+			$scope.$broadcast('scroll.refreshComplete');
+  })
+	}
 })

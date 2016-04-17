@@ -33,21 +33,8 @@ angular.module('ridesService', ['ionic'])
   }).then(function (resps) {
     console.log(resps)
   })
-  var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
-  $http.post(url, {
-    "daysOfWeek": "1",
-    "dropLat": 2,
-    "dropLong": 2,
-    "timeSec": "3",
-    "pickLat": 12,
-    "time": "2",
-    "pickLong": 3,
-    "userID": "sam",
-		"date": "2016, 20, 4"
-  }).then(function (resps) {
-    console.log(resps)
-  })
 	
+
 
     var playlists = [
       {

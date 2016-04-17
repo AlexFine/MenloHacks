@@ -2,9 +2,12 @@
 <ion-nav-buttons  side="right">
 		<a ng-click="addRide()"><i style="font-size:40px; color:white;" class="ion-ios-plus-outline"></i></a>
 	</ion-nav-buttons>
-  <ion-content>
 	
-
+  <ion-content>
+	<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="strawberry()">
+  </ion-refresher>
         <div ng-repeat="playlist in playlists" class="ride" >
             <a  href="#/app/playlists/{{playlist.id}}">
               <div  class="cover" style="background-image:url('{{playlist.image}}'); ">
@@ -27,6 +30,6 @@
             </a>
 
         </div>
-
+	
   </ion-content>
 </ion-view>

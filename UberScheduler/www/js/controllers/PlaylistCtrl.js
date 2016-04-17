@@ -1,6 +1,10 @@
 // console.log("Playlist Ctrl Loaded"); // Debugging
 angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'ionic-datepicker'])
 .controller('PlaylistCtrl', function($scope, $ionicPopup, $stateParams, retrieveSchedule, pushSchedule, ionicTimePicker, ionicDatePicker, $http) {
+		
+
+		
+		
   // Get playlist from service
   $scope.playlists = retrieveSchedule;
 
@@ -244,7 +248,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
 		var repeatedDays = $scope.playlists[id].repeatedDays;
 		repeatedDays = JSON.stringify(repeatedDays)
 		
-			var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/user/create";
+			var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/create";
   $http.post(url, {
 //    "userID":userID,
 ////    "message":email,
@@ -283,6 +287,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
 	
 	
 	}
+	
 
 
 });
