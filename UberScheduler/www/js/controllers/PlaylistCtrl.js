@@ -1,3 +1,4 @@
+console.log("Playlist Ctrl Loaded")
 angular.module('playlistCtrl', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
     $scope.oneOn = true;

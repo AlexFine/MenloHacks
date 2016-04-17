@@ -1,5 +1,5 @@
 console.log("Rides service file loaded");
-angular.module('ridesService', ['ionic','$http'])
+angular.module('ridesService', ['ionic'])
   .factory('testVariable', function() {
     return "Rides Service Works"
   })
