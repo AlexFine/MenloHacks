@@ -28,6 +28,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'geocodingService', 'io
   // Set location on start
   $scope.pickup = $scope.playlists[lastChar-1].pickup;
   $scope.dropoff = $scope.playlists[lastChar-1].dropoff;
+  console.log($scope.pickup);
 
   // Update the scope value every time there's a change
   $scope.updatedLocation = function() {
