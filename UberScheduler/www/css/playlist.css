@@ -1,0 +1,16 @@
+.form-item {
+  padding: 24px;
+}
+
+.form-label {
+  width: 20%;
+  float: left;
+  font-size: 16px;
+  padding: 6px;
+}
+
+.form-content {
+  width: 80%;
+  float: right;
+  background-color: red;
+}
