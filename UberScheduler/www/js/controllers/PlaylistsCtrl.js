@@ -9,7 +9,6 @@ angular.module('playlistsCtrl', ['ridesService', 'ngCordovaOauth'])
     console.log("Error -> " + error);
 });
 	}
-	$scope.banana();
 	
 
   console.log(testFunction(5));
