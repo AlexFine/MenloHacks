@@ -46,7 +46,7 @@ a{
 .bluebar{
     height:53px;
     background-color:#546E7A;
-    color:white;
+    color:white; 
 		overflow:auto;
 		overflow:hidden
 }

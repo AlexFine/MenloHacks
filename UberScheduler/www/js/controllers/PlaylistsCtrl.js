@@ -1,6 +1,6 @@
 // console.log("Playlists Ctrl loaded"); // Feedback
 angular.module('playlistsCtrl', ['ridesService'])
-.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http) {
+.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup) {
   console.log(testFunction(5));
   console.log(testVariable);
   // $scope.test = function($cordovaOauth){
@@ -44,4 +44,43 @@ angular.module('playlistsCtrl', ['ridesService'])
     { time: '6:30 PM', id: 3, image: 'img/Land.jpg', dropoff: '680 Point Lobos Ave, San Francisco, CA 94121', pickup: 'Menlo School, Atherton, CA 94027' },
     { time: '5:00 AM', id: 4, image: 'img/Salesforce.jpg',  dropoff: 'Salesforce Twoer, San Francisco, CA 94105', pickup: 'Menlo School, Atherton, CA 94027' },
   ];
+	
+	
+		$scope.addRide = function(){
+			console.log("hello")
+        var myPopup = $ionicPopup.show({
+          template: "Add a new ride?",
+          title: "Add Ride",
+          scope: $scope,
+          buttons: [
+            
+            {
+              text: 'Cancel',
+              type: 'button-stable',
+              onTap: function () {
+                console.log("hello2");
+                myPopup.close();
+              
+
+              }
+            },
+						{
+              text: 'Add',
+              type: 'button-dark',
+              onTap: function () {
+                console.log("hello1");
+                myPopup.close();
+                //$scope.choosePhoto();
+
+
+              }
+            }
+          ]
+        });
+        $scope.closepopup = function () {
+          myPopup.close();
+        }
+      }
+	
+	
 })
