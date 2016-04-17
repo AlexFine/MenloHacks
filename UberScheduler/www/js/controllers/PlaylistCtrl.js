@@ -24,10 +24,27 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
   $scope.daysOfWeekLong = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   $scope.daysOfWeekShort = ["S", "M", "T", "W", "T", "F", "S"];
   $scope.showColon = function() { // To decide if showing a colon
-    for(var i; i < 7; i++) { // Cycle
-      if (playlists[lastChar-1].repeatedDays[i] == 'true') {
-        return true
+    for(var i = 0; i < 7; i++) { // Cycle
+      if ($scope.playlists[lastChar-1].repeatedDays[i] == true) {
+        return true // Show colon
       }
+    }
+  }
+  $scope.showComma = function(index) {
+    var repeatedDays = $scope.playlists[lastChar-1].repeatedDays;
+    var lastSelectedDay = 0;
+    for (var i = 0; i < repeatedDays.length; i++) {
+      if (repeatedDays[i]) {
+        lastSelectedDay = i;
+        // console.log("Last selected day:", lastSelectedDay); // Debugging
+      }
+    }
+    if (index == lastSelectedDay) {
+      // console.log("Not using comma");
+      return false
+    } else {
+      // console.log("Using comma");
+      return true
     }
   }
   $scope.toggleRepeatedDay = function(index) {
@@ -50,7 +67,7 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
     pushSchedule(updatedPlaylist); // Push to server
   }
 
-  $scope.data = [true, true, false, true, false, true, true];
+  $scope.data = $scope.playlists[lastChar-1].repeatedDays; // Starting values
   // Repeating day toggle switch value
   $scope.showPopup = function() {
     var repeatedDays = retrieveSchedule[lastChar-1].repeatedDays;
@@ -66,8 +83,8 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
 
     var schedulePopup = $ionicPopup.show({
       template: template,
-      title: 'Enter Wi-Fi Password',
-      subTitle: 'Please use normal things',
+      title: 'Recurring Schedule',
+      subTitle: 'Select days of the week',
       scope: $scope,
       buttons: [
         { text: 'Cancel' },
@@ -79,7 +96,20 @@ angular.module('playlistCtrl', ['ionic', 'ridesService', 'ionic-timepicker', 'io
               // Will never trigger
               e.preventDefault();
             } else {
-              console.log($scope.data);
+              // Save data
+              var oldPlaylist = retrieveSchedule[lastChar-1];
+              var updatedPlaylist = {
+                time: oldPlaylist.time,
+                id: $scope.lastChar,
+                date: oldPlaylist.date,
+                repeating: oldPlaylist.repeating,
+                repeatedDays: $scope.data,
+                image: oldPlaylist.image,
+                dropoff: oldPlaylist.dropoff,
+                pickup: oldPlaylist.pickup
+              }
+              $scope.playlists[lastChar-1] = updatedPlaylist;
+              pushSchedule(updatedPlaylist)
               return repeatedDays;
             }
           }

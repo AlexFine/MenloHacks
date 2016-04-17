@@ -30,7 +30,7 @@ angular.module('ridesService', ['ionic'])
         id: 2,
         date: new Date(2016, 20, 4),
         repeating: false,
-        repeatedDays: [false, true, false, true, false, true, false],
+        repeatedDays: [false, false, false, false, false, false, false],
         image: 'img/Art.jpg',
         dropoff: '755 Ocean Ave, San Francisco, CA',
         pickup: 'Menlo School, Atherton, CA 94027'

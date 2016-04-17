@@ -29,13 +29,34 @@
 }
 
 .configure-button {
-  /*background-color: #90A4AE;*/
-  /*color: white;*/
   text-align: left;
 }
 
-.repeated-day-picker {
-  margin-top: 75px;
+.button-positive {
+  /*Override default*/
+  background-color: #546E7A !important;
+  color: white !important;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  /*Override default checklist*/
+  background-color: #546E7A !important;
+  border-color: #CFD8DC !important;
+}
+
+.popup {
+  /*Override default*/
+  width: 90% !important;
+}
+
+.popup-title {
+  /*Override default*/
+  font-size: 24px !important;
+}
+
+.popup-sub-title {
+  /*Override default*/
+  font-size: 16px !important;
 }
 
 .day-button {
