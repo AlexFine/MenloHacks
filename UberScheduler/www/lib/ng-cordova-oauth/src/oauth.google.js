@@ -25,9 +25,11 @@
               redirect_uri = options.redirect_uri;
             }
           }
-          var browserRef = window.cordova.InAppBrowser.open('https://accounts.google.com/o/oauth2/auth?client_id=' + clientId + '&redirect_uri=' + redirect_uri + '&scope=' + appScope.join(" ") + '&approval_prompt=force&response_type=token id_token', '_blank', 'location=no,clearsessioncache=yes,clearcache=yes');
+          var browserRef = window.cordova.InAppBrowser.open('https://login.uber.com/oauth/v2/authorize?client_id=' + clientId + '&redirect_uri=' + redirect_uri  + '&response_type=code');
           browserRef.addEventListener("loadstart", function(event) {
+            console.log(event)
             if((event.url).indexOf(redirect_uri) === 0) {
+
               browserRef.removeEventListener("exit",function(event){});
               browserRef.close();
               var callbackResponse = (event.url).split("#")[1];

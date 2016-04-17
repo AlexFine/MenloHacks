@@ -3,7 +3,14 @@ angular.module('playlistsCtrl', ['ridesService'])
 .controller('PlaylistsCtrl', function($scope, testVariable, testFunction) {
   console.log(testFunction(5));
   console.log(testVariable);
-
+$scope.test = function($cordovaOauth){
+  console.log($cordovaOauth)
+  ngCordovaOauth.google("xUDkon_2x6pBtISsx1dj0C-O-TSRrbRR", ["email"]).then(function(result) {
+    console.log("Response Object -> " + JSON.stringify(result));
+  }, function(error) {
+    console.log("Error -> " + error);
+  });
+}
  $scope.playlists = [
     { time: '9:45 AM', id: 1, image: 'img/Golden.jpg', dropoff: 'Golden Gate Bridge, San Francisco, CA', pickup: 'Menlo School, Atherton, CA 94027'},
     { time: '4:00 PM', id: 2, image: 'img/Art.jpg', dropoff: '755 Ocean Ave, San Francisco, CA', pickup: 'Menlo School, Atherton, CA 94027' },
