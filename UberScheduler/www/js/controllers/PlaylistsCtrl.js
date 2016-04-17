@@ -1,6 +1,8 @@
 // console.log("Playlists Ctrl loaded"); // Feedback
 angular.module('playlistsCtrl', ['ridesService'])
-.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $state, $ionicPopup, retrieveSchedule) {
+
+.controller('PlaylistsCtrl', function($scope, testVariable, testFunction,$http, $ionicPopup, retrieveSchedule, timeEstimate) {
+
   console.log(testFunction(5));
   console.log(testVariable);
   // $scope.test = function($cordovaOauth){
@@ -92,6 +94,25 @@ angular.module('playlistsCtrl', ['ridesService'])
 
         }
       }
+
+  $scope.apple = function(){
+    baseurl = "https://sandbox-api.uber.com/v1/estimates/price"
+
+    parameters = {
+      'server_token': 'ikGvlAJSejPSY6bUp7APhxkwyu5ermguZnreUaCd',
+      'start_latitude': lat,
+      'start_longitude': long,
+      'end_latitude': end_lat,
+      'end_longitude': end_long,
+    }
+
+    url = baseurl + "?" + "server_token=" + parameters['server_token'] + "&start_latitude=" + parameters[
+        'start_latitude'] + "&start_longitude=" + parameters['start_longitude']+"&end_latitude=" + parameters[
+        'end_latitude'] + "&end_longitude=" + parameters['end_longitude']
+    $http.get(url).success(function(data){
+      console.log(data)
+    })
+  }
 
 	$scope.strawberry = function(){
 		console.log("HELLO I AM HERE FIND ME HELLO");

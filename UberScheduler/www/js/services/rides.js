@@ -24,16 +24,16 @@ angular.module('ridesService', ['ionic'])
 //  var image = 'img/Golden.jpg';
 //  var dropoff = 'Golden Gate Bridge, San Francisco, CA';
 //  var pickup = 'Menlo School, Aherton, CA 94027'
-						
-				
-	
+
+
+
   var url = "https://uberschedulerp.appspot.com/_ah/api/uberApi/v1/ride/return";
   $http.post(url, {
     "userID":userID
   }).then(function (resps) {
     console.log(resps)
   })
-	
+
 
 
     var playlists = [
@@ -83,7 +83,7 @@ angular.module('ridesService', ['ionic'])
       },
     ];
 
-	
+
     return playlists
   })
 
@@ -94,18 +94,21 @@ angular.module('ridesService', ['ionic'])
     }
   })
 
-  .factory('timeEstimate', function() {
-    return function(long, lat, uber_level) {
-      baseurl = "https://sandbox-api.uber.com/v1/estimates/time"
+  .factory('timeEstimate', function($http) {
+    return function(long, lat, end_lat, end_long) {
+      baseurl = "https://sandbox-api.uber.com/v1/estimates/price"
 
       parameters = {
         'server_token': 'ikGvlAJSejPSY6bUp7APhxkwyu5ermguZnreUaCd',
-        'start_latitude': str(lat),
-        'start_longitude': str(long),
+        'start_latitude': lat,
+        'start_longitude': long,
+        'end_latitude': end_lat,
+        'end_longitude': end_long,
       }
 
       url = baseurl + "?" + "server_token=" + parameters['server_token'] + "&start_latitude=" + parameters[
-          'start_latitude'] + "&start_longitude=" + parameters['start_longitude']
+          'start_latitude'] + "&start_longitude=" + parameters['start_longitude']+"&end_latitude=" + parameters[
+        'end_latitude'] + "&end_longitude=" + parameters['end_longitude']
       $http.get(url).success(function(data){
         return data
       })
