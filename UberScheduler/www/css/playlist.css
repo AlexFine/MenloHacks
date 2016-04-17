@@ -11,17 +11,28 @@
   float: right;
 }
 
-.content-edit {
-  font-size: 24px !important;
-  line-height: 24px;
+.time-edit {
+  font-size: 32px !important;
+  line-height: 44px;
   color: black;
 }
 
+.time-description {
+  font-size: 16px !important;
+  line-height: 32px;
+}
 
 .date-edit {
-  font-size: 32px;
+  font-size: 24px !important;
   color: black;
-  line-height: 32px;
+  line-height: 48px;
+  /*word-wrap: break-word;
+  white-space: pre-wrap !important;*/
+}
+
+.schedule-edit {
+  font-size: 20px !important;
+  line-height: 36px;
 }
 
 .feedback {
@@ -30,6 +41,8 @@
 
 .configure-button {
   text-align: left;
+  font-size: 20px !important;
+  line-height: 36px;
 }
 
 .button-positive {

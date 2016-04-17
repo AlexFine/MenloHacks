@@ -21,24 +21,29 @@
           <ul class="list">
               <li class="item">
                 <div class="form-label">
-                  Pickup<br>Time
+                  <img src="img/Clock_Icon.png" width="75px">
                 </div>
                 <div class="form-content">
                   <a ng-click="editTime()">
-                    <p class="content-edit">
+                    <p class="time-edit">
                       {{playlists[lastChar-1].time}}
+                    </p>
+                    <p class="time-description">
+                      Pickup Time
                     </p>
                   </a>
                 </div>
               </li>
               <li class="item">
                 <div class="form-label">
-                  Date
+                  <img src="img/Calendar_Icon.png" width="75px">
                 </div>
                 <div class="form-content">
                   <a ng-click="editDate()">
-                    <p class="content-edit">
+                    <p class="date-edit">
                       {{playlists[lastChar-1].date | date : 'MMMM d, yyyy'}}
+                      <!-- <br>
+                      {{playlists[lastChar-1].date | date : 'yyyy'}} -->
                     </p>
                   </a>
                 </div>
@@ -56,13 +61,14 @@
                 </div>
                 <div class="form-content">
                   <p class="content-edit">
-                    Recurring Schedule
+                    <p class="schedule-edit">Recurring Schedule</p>
                     <span id="repeatingCheckboxVal" class="feedback">{{repeating}}</span>
                   </p>
                 </div>
               </li>
               <li class="item configure-button" ng-click="showPopup()">
                   Configure Schedule<span ng-show="showColon()">:</span>
+                  <br>
                   <span ng-repeat="day in playlists[lastChar-1].repeatedDays track by $index">
                     <span ng-show="day">
                       {{daysOfWeekShort[$index]}}<span ng-show="showComma($index)">, </span>
@@ -99,10 +105,10 @@
 		<div  style="padding-top:100px;">
 		<div class="bar bar-footer bar-positive" ng-click="update()">
   		<h1 class="title">Save</h1>
-		
+
 			</div></div>
-		
-	
+
+
 
 
   </ion-content>
