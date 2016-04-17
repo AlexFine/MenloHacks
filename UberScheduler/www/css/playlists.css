@@ -44,7 +44,7 @@ a{
     text-decoration: none;
 }
 .bluebar{
-    height:50px;
+    height:53px;
     background-color:#546E7A;
     color:white;
 		overflow:auto;
@@ -57,7 +57,7 @@ a{
 }
 .onebaractive {
     text-align:center;
-    border-bottom: 5px solid #ECEFF1;
+    border-bottom: 8px solid #ECEFF1;
     color:white;
 		font-size:18px;
 }
@@ -68,7 +68,7 @@ a{
 }
 .twobaractive {
     text-align:center;
-    border-bottom: 5px solid #ECEFF1;
+    border-bottom: 8px solid #ECEFF1;
     color:white;
 		font-size:18px;
 }
