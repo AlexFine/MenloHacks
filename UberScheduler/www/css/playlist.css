@@ -70,6 +70,10 @@
   transform: translateX(-37.5px);
 }
 
+.popup-title {
+  font-family: Raleway !important;
+}
+
 .spinner svg {
   width: 75px;
   height: 75px;

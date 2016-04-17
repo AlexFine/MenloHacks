@@ -7,11 +7,11 @@
   width: 100%;
   height: 100%;
 
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
+  -webkit-filter: blur(1.5px) grayscale(20%) brightness(85%);
+  -moz-filter: blur(1.5px) grayscale(20%) brightness(85%);
+  -o-filter: blur(1.5px) grayscale(20%) brightness(85%);
+  -ms-filter: blur(1.5px) grayscale(20%) brightness(85%);
+  filter: blur(1.5px) grayscale(20%) brightness(85%);
 
 }
 
@@ -46,7 +46,7 @@ a{
 .bluebar{
     height:53px;
     background-color:#546E7A;
-    color:white; 
+    color:white;
 		overflow:auto;
 		overflow:hidden
 }

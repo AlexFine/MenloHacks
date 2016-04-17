@@ -12,5 +12,13 @@ dl, dd, ol, ul, figure {
 }
 */
 body {
-	font-family:Raleway;
+	font-family: Raleway;
+}
+
+html {
+	font-family: Raleway !important;
+}
+
+.left-buttons {
+	margin-left: 6px;
 }
