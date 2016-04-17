@@ -70,3 +70,4 @@ angular.module('starter.controllers', [])
     { time: '5:00 AM', id: 4, image: 'img/Salesforce.jpg',  dropoff: 'Salesforce Twoer, San Francisco, CA 94105', pickup: 'Menlo School, Atherton, CA 94027' },
   ];
 });
+
