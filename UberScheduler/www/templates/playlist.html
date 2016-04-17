@@ -25,23 +25,35 @@
             <div class="form-content">
               <a ng-click="editTime(lastChar)">
                 <p class="time-edit">
-                  8:00 PM
+                  {{playlists[lastChar-1].time}}
                 </p>
               </a>
             </div>
           </div>
 
-          <div class="form-item">
+          <div class="form-item repeat-setting">
             <div class="form-label">
               <label class="toggle">
-                 <input type="checkbox">
+                 <input type="checkbox" ng-model="repeating"
+                  ng-true-value="true" ng-false-value="false" ng-init="initialRepeat()" ng-click="changedRepeat()">
                  <div class="track">
                    <div class="handle"></div>
                  </div>
               </label>
             </div>
             <div class="form-content">
-              Repeating Schedule
+              <p class="repeat-toggle-label">
+                Repeating Schedule
+                <span id="repeatingCheckboxVal" class="feedback">{{repeating}}</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="row repeated-day-picker">
+            <div class="col" ng-repeat="day in playlists[lastChar-1].repeatedDays track by $index">
+              <div class="day-button" ng-class="(day ? 'day-positive' : 'day-negative')" ng-click="toggleRepeatedDay($index)">
+                {{daysOfWeekShort[$index]}}
+              </div>
             </div>
           </div>
 

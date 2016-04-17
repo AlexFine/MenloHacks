@@ -21,6 +21,35 @@
   line-height: 48px;
 }
 
+.repeat-setting {
+  margin-top: 75px;
+}
+
+.repeat-toggle-label {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.feedback {
+  display: none;
+}
+
+.repeated-day-picker {
+  margin-top: 75px;
+}
+
+.day-button {
+  text-align: center;
+  height: 50px;
+  border-radius: 5px;
+  /*border: 1px solid black;*/
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.day-positive {
+  background-color: #B0BEC5;
+}
 
 /*Ionic Time Picker Components*/
 .ionic_timepicker_popup {

@@ -20,6 +20,29 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker'])
   // Retrieve the schedule data from service
   $scope.playlists = retrieveSchedule;
 
+  // Day of the week picker
+  $scope.daysOfWeekLong = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  $scope.daysOfWeekShort = ["S", "M", "T", "W", "T", "F", "S"];
+  $scope.toggleRepeatedDay = function(index) {
+    // console.log(index); // Debugging
+    var oldPlaylist = retrieveSchedule[lastChar-1]; // Store old
+    var newRepeat = oldPlaylist.repeatedDays; // Store old
+    newRepeat[index] = !oldPlaylist.repeatedDays[index]; // Toggle
+    console.log("Toggling", $scope.daysOfWeekLong[index], "to", newRepeat[index]); // Debugging
+
+    var updatedPlaylist = {
+      time: oldPlaylist.time,
+      id: $scope.lastChar,
+      repeating: oldPlaylist.repeating,
+      repeatedDays: newRepeat,
+      image: oldPlaylist.image,
+      dropoff: oldPlaylist.dropoff,
+      pickup: oldPlaylist.pickup
+    }
+    pushSchedule(updatedPlaylist); // Push to server
+  }
+
+
   // Create time picker object
   // Time picker documentation: https://github.com/rajeshwarpatlolla/ionic-timepicker
   var currentEpoche = (((new Date()).getHours() * 60 * 60) + ((new Date()).getMinutes() * 60));
@@ -51,10 +74,13 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker'])
         var updatedPlaylist = {
           time: concatString,
           id: $scope.lastChar,
+          repeating: oldPlaylist.repeating,
+          repeatedDays: oldPlaylist.repeatedDays,
           image: oldPlaylist.image,
           dropoff: oldPlaylist.dropoff,
           pickup: oldPlaylist.pickup
         }
+        $scope.playlists[lastChar-1] = updatedPlaylist;
         pushSchedule(updatedPlaylist)
       }
     },
@@ -66,12 +92,31 @@ angular.module('playlistCtrl', ['ridesService', 'ionic-timepicker'])
     closeLabel: 'Cancel'
   };
 
+  // Repeat toggle switch value
+  $scope.repeating = false; // Initial value
+  $scope.initialRepeat = function() {
+    $scope.repeating = retrieveSchedule[lastChar-1].repeating;
+  }
+  $scope.changedRepeat = function() {
+    var oldPlaylist = retrieveSchedule[lastChar-1];
+    var repeatVal = document.getElementById('repeatingCheckboxVal').innerHTML;
+    console.log(repeatVal);
+    var updatedPlaylist = {
+      time: oldPlaylist.time,
+      id: $scope.lastChar,
+      repeating: repeatVal,
+      repeatedDays: oldPlaylist.repeatedDays,
+      image: oldPlaylist.image,
+      dropoff: oldPlaylist.dropoff,
+      pickup: oldPlaylist.pickup
+    };
+    pushSchedule(updatedPlaylist);
+  }
+
   // Setting time
   $scope.editTime = function(lastChar) { // lastChar is the index in the URL
     // console.log(lastChar); // Debugging
-
-    // Open time picker object
-    ionicTimePicker.openTimePicker(timePicker);
+    ionicTimePicker.openTimePicker(timePicker); // Open time picker object
   }
 	
 	$scope.gPlace;
