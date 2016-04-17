@@ -57,6 +57,10 @@
   border-color: #CFD8DC !important;
 }
 
+.location-item {
+  padding-bottom: 20px;
+}
+
 .button-custom {
   background-color: #546E7A !important;
   width: 100vw;
