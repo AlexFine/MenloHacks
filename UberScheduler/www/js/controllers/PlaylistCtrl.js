@@ -7,6 +7,7 @@ angular.module('playlistCtrl', ['ridesService'])
     $scope.toggleTab = function(){
         $scope.oneOn = !$scope.oneOn;
         console.log("Toggling");
+
     }
 
 

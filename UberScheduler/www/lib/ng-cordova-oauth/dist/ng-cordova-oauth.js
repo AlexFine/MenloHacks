@@ -1,4 +1,6 @@
+
 (function() {
+  console.log("loaded")
   'use strict';
 
   angular.module('oauth.adfs', ['oauth.utils'])
